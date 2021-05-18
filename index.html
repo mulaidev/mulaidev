@@ -10,19 +10,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
         <style>
             body {
-                background-color: rgb(241, 234, 165);
-                background-image: url(./user-scroll.png);
+                background-color: #eee;
+                background-image: url(./user-collaboration.png);
                 background-repeat: no-repeat;
                 background-position: center bottom;
                 background-size: 70vw;
                 font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                color: rgb(91, 189, 228);
+                color: #0457d4;
                 line-height: 1.8em;
-                font-size: 1.6rem;
+                font-size: 1.2rem;
             }
 
             a {
+                color: royalblue;
                 text-decoration: none;
+                transition: all .5s;
+            }
+            a:hover {
+                color: #0457d4;
             }
 
             .container {
@@ -34,6 +39,18 @@
             h1 {
                 line-height: 1.2em;
                 text-transform: uppercase;
+            }
+
+            h2 {
+                text-transform: uppercase;
+            }
+
+            .quote {
+                font-size: 1.5rem;
+            }
+
+            .float-right {
+                float: right;
             }
 
             .text-center {
@@ -49,6 +66,10 @@
                 margin-bottom: 2rem;
             }
 
+            em {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
             .grid {
                 display: flex;
                 flex-direction: column;
@@ -60,20 +81,25 @@
             }
 
             .btn {
-                background-color: royalblue;
+                background-color: #0457d4;
+                border-radius: 3rem;
                 color: white;
-                padding: 1.5rem 4.5rem;
+                font-size: 1rem;
+                font-weight: bold;
+                letter-spacing: .123rem;
+                padding: 1rem 2.5rem;
+                text-transform: uppercase;
                 transition: all .5s;
             }
 
             .btn:hover {
-                background-color: rgb(0, 81, 255);
+                background-color: royalblue;
             }
 
             @media (min-width: 992px) {
                 body {
-                    background-position: 0 bottom;
-                    background-size: 25vw;
+                    background-size: 25rem;
+                    padding-bottom: 5rem;
                 }
 
                 .container {
@@ -91,6 +117,10 @@
                 .grid>p {
                     margin: 0 2.5rem 4rem;
                 }
+                .btn {
+                    font-size: 1.4rem;
+                    padding: 1.5rem 4.5rem;
+                }
             }
 
         </style>
@@ -100,14 +130,12 @@
 
         <div class="container">
             <div class="text-center">
-                <h1>Mulai berkarya untuk masa depan</h1>
-                <p>Bersama meraih keberkahan dengan membangun karya nyata yang berdampak positif melalui pembelajaran
-                    tatap muka dan media online selama bulan Ramadan bersama para profesional di bidang Desain,
-                    Pemrograman, Manajemen dan Marketing.</p>
+                <h1>Mulai berkarya<br>bersama</h1>
+                <p class="quote"><em>Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio bersama.</em></p>
                 <br><br><br>
             </div>
             <div class="text-center">
-                <h2>Dapatkan pelajaran dan pengalaman berharga</h2>
+                <h2>Kompetensi adaptif<br>untuk menghadapi jaman disruptif</h2>
                 <br>
             </div>
             <div class="grid">
@@ -118,9 +146,16 @@
                 <p><strong>Jaringan koneksi antar kampus</strong><br>Jalin hubungan baik dengan mahasiswa dengan latar
                     belakang jurusan berbeda.</p>
             </div>
-
+            <div class="grid">
+                <p><strong>Kesempatan mengikuti pelatihan gratis!</strong><br>Tingkatkan kapasitas diri dengan terus
+                    melatih diri dan mulai kolaborasi dengan sesama peserta.</p>
+                <p><strong>Info seputar beasiswa</strong><br>Mengetahui kesempatan lebih awal langsung dari penyedia
+                    beasiswa.</p>
+                <p><strong>Jaringan koneksi antar kampus</strong><br>Jalin hubungan baik dengan mahasiswa dengan latar
+                    belakang jurusan berbeda.</p>
+            </div>
             <div class="text-center">
-                <h2>Dibimbing oleh mentor-mentor<br>yang mampu membangkitkan potensi</h2>
+                <h2>Dipandu para mentor<br>yang mampu membangkitkan potensi</h2>
                 <br>
             </div>
             <div class="grid evenly text-center">
@@ -132,6 +167,8 @@
                 <a class="btn" href="http://bit.ly/mulaidev">Mulai Berkarya</a>
             </div>
             <br><br><br><br><br>
+            <a class="float-right" href="https://www.instagram.com/mulaidev/">@mulaidev</a>
+            <a href="https://github.com/mulaidev/">/mulaidev</a>
         </div>
 
     </body>
