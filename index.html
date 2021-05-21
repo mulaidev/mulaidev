@@ -10,12 +10,15 @@
         <meta property="og:title" content="Mulaidev Initiative">
         <meta property="og:url" content="https://mulai.dev">
         <meta property="og:image" content="https://mulai.dev/user-collaboration.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./logo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./logo.png">
         <title>Mulai membangun karya portfolio bersama copywriter, desainer dan programmer</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
         <style>
             body {
-                background-color: #eee;
+                background-color: #fff;
                 background-image: url(./user-collaboration.png);
                 background-repeat: no-repeat;
                 background-position: center bottom;
@@ -85,6 +88,12 @@
                 margin-bottom: 6rem;
             }
 
+            .grid.between {
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 1rem;
+            }
+
             .grid>p {
                 margin: 0 1.5rem 4rem;
             }
@@ -101,9 +110,26 @@
                 transition: all .5s;
             }
 
+            .btn.btn-small {
+                font-size: .85rem;
+                padding: .5rem 2rem;
+                line-height: 35pt;
+            }
+
             .btn:hover {
                 background-color: royalblue;
                 color: #fff;
+            }
+
+            .btn-nav {
+                font-size: 1rem;
+                margin: .75rem;
+                border: 2px solid royalblue;
+                border-radius: 3rem;
+                padding: .5rem 2rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: .123rem;
             }
 
             @media (min-width: 992px) {
@@ -137,7 +163,10 @@
     </head>
 
     <body>
-
+        <div class="grid between">
+            <img height="60" width="60" src="./logo.png" alt="Mulaidev">
+            <a class="btn-nav" href="https://forms.formium.io/f/608b70ac0304f100014f8570">Register</a>
+        </div>
         <div class="container">
             <div class="text-center">
                 <h1>Mulai berkarya<br>bersama</h1>
@@ -175,7 +204,7 @@
                 <p><img src="egi.png" alt="Foto" height="150" width="150"><br><strong>Egi</strong><br>Mentor</p>
             </div>
             <div class="text-center">
-                <a class="btn" href="http://bit.ly/mulaidev">Mulai Berkarya</a>
+                <a class="btn" href="https://forms.formium.io/f/608b70ac0304f100014f8570">Mulai Berkarya</a>
             </div>
             <br><br><br><br><br>
             <a class="float-right" href="https://www.instagram.com/mulaidev/">@mulaidev</a>
