@@ -27,6 +27,7 @@
                 color: #0457d4;
                 line-height: 1.8em;
                 font-size: 1.2rem;
+                margin: 0;
             }
 
             a {
@@ -47,6 +48,7 @@
             h1, h2 {
                 color: royalblue;
                 text-transform: uppercase;
+                word-spacing: .25rem;
             }
 
             h1 {
@@ -80,6 +82,41 @@
 
             em {
                 font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .bg {
+                background-image: url(./bg.jpeg);
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .bg>div {
+                padding: 2rem;
+                background-color: rgb(251 237 68 / 72%);
+            }
+
+            .bg-blue {
+                background-color: #0457d4;
+                background-image: url(./bg-card.jpeg);
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+                border-radius: 2rem;
+                margin: 0 -1.5rem 6rem;
+                overflow: hidden;
+            }
+
+            .bg-blue>div {
+                background-color: #0457d4be;
+                padding: 2rem 2rem 0;
+            }
+
+            .bg-blue .grid {
+                margin-bottom: 0;
+            }
+
+            .bg-blue h1, .bg-blue h2, .bg-blue p, .bg-blue strong {
+                color: yellow;
             }
 
             .grid {
@@ -167,12 +204,15 @@
             <img height="80" width="80" src="./logo.png" alt="Mulaidev">
             <a class="btn-nav" href="https://forms.formium.io/f/608b70ac0304f100014f8570">Register</a>
         </div>
-        <div class="container">
+        <div class="bg">
             <div class="text-center">
+                <br><br><br>
                 <h1>Mulai berkarya<br>bersama</h1>
                 <p class="quote"><em>Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio bersama.</em></p>
                 <br><br><br>
             </div>
+        </div>
+        <div class="container">
             <div class="text-center">
                 <h2>Jenjang karir yang akan difokuskan</h2>
                 <br>
@@ -182,26 +222,29 @@
                 <p><strong>Frontend Web Developer</strong><br>Bertugas mengubah bahasa desain menjadi bahasa pemrograman dan mengintegrasikannya menjadi tampilan yang responsif.</p>
                 <p><strong>Backend Web Developer</strong><br>Membuat fungsi logika yang membuat sistem berjalan sesuai alur kerja.</p>
             </div>
-            <div class="text-center">
-                <h2>Kompetensi adaptif<br>untuk menghadapi jaman disruptif</h2>
-                <br>
-            </div>
-            <div class="grid">
-                <p><strong>Kesempatan mengikuti pelatihan gratis!</strong><br>Tingkatkan kapasitas diri dengan terus
-                    melatih diri dan mulai kolaborasi dengan sesama peserta.</p>
-                <p><strong>Info seputar beasiswa</strong><br>Mengetahui kesempatan lebih awal langsung dari penyedia
-                    beasiswa.</p>
-                <p><strong>Jaringan koneksi antar kampus</strong><br>Jalin hubungan baik dengan mahasiswa dengan latar
-                    belakang jurusan berbeda.</p>
+            <div class="bg-blue">
+                <div class="text-center">
+                    <h2>Kompetensi adaptif<br>untuk menghadapi jaman disruptif</h2>
+                    <br>
+                </div>
+                <div class="grid">
+                    <p><strong>Kesempatan mengikuti pelatihan gratis!</strong><br>Tingkatkan kapasitas diri dengan terus
+                        melatih diri dan mulai kolaborasi dengan sesama peserta.</p>
+                    <p><strong>Info seputar beasiswa</strong><br>Mengetahui kesempatan lebih awal langsung dari penyedia
+                        beasiswa.</p>
+                    <p><strong>Jaringan koneksi antar kampus</strong><br>Jalin hubungan baik dengan mahasiswa dengan latar
+                        belakang jurusan berbeda.</p>
+                </div>
             </div>
             <div class="text-center">
                 <h2>Dipandu para mentor<br>yang mampu membangkitkan potensi</h2>
                 <br>
             </div>
             <div class="grid evenly text-center">
-                <p><img src="dinda.png" alt="Foto" height="150" width="150"><br><strong>Dinda</strong><br>Mentor</p>
-                <p><img src="arif.png" alt="Foto" height="150" width="150"><br><strong>Arif</strong><br>Mentor</p>
-                <p><img src="egi.png" alt="Foto" height="150" width="150"><br><strong>Egi</strong><br>Mentor</p>
+                <p><img src="bill.png" alt="Foto" height="150" width="150"><br><strong>Billah</strong><br>Mentor Digital Marketing</p>
+                <p><img src="dinda.png" alt="Foto" height="150" width="150"><br><strong>Dinda</strong><br>Mentor Jurnalistik</p>
+                <p><img src="arif.png" alt="Foto" height="150" width="150"><br><strong>Arif</strong><br>Mentor Copywriting</p>
+                <p><img src="egi.png" alt="Foto" height="150" width="150"><br><strong>Egi</strong><br>Mentor Photography</p>
             </div>
             <div class="text-center">
                 <a class="btn" href="https://forms.formium.io/f/608b70ac0304f100014f8570">Mulai Berkarya</a>
