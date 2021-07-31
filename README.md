@@ -4,7 +4,7 @@ Roadmap:
 
 [x] Astro integration
 
-[ ] Tailwind integration
+[x] Tailwind integration
 
 [ ] Supabase integration
 

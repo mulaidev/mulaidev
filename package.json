@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npx tailwindcss -o public/style.css && astro dev",
-    "build": "npx tailwindcss -o dist/style.css --minify && astro build",
-    "css": "astro build"
+    "start": "astro dev",
+    "build": "astro build",
+    "watch": "npx tailwindcss -o public/style.css --watch",
+    "minify": "npx tailwindcss -o public/style.css --minify"
   },
   "devDependencies": {
     "astro": "^0.18.5",
