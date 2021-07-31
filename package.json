@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "astro dev",
-    "build": "astro build"
+    "start": "npx tailwindcss -o public/style.css && astro dev",
+    "build": "npx tailwindcss -o dist/style.css --minify && astro build",
+    "css": "astro build"
   },
   "devDependencies": {
     "astro": "^0.18.5",
-    "prettier": "2.3.2",
     "tailwindcss": "^2.2.7"
   }
 }
