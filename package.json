@@ -1,0 +1,14 @@
+{
+  "name": "mulaidev",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "astro dev",
+    "build": "astro build"
+  },
+  "devDependencies": {
+    "astro": "^0.18.5",
+    "prettier": "2.3.2",
+    "tailwindcss": "^2.2.7"
+  }
+}
