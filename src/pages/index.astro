@@ -1,276 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Ubah ide menjadi karya nyata dengan kolaborasi membangun portfolio bersama." />
-        <meta property="og:site_name" content="Mulaidev">
-        <meta property="og:title" content="Mulaidev Initiative">
-        <meta property="og:url" content="https://mulai.dev">
-        <meta property="og:image" content="https://mulai.dev/public/user-collaboration.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png">
-        <title>Mulai membangun karya portfolio bersama copywriter, desainer dan programmer</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
-        <style>
-            body {
-                background-color: #fff;
-                background-image: url(/user-collaboration.png);
-                background-repeat: no-repeat;
-                background-position: center bottom;
-                background-size: 70vw;
-                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                color: #0457d4;
-                line-height: 1.8em;
-                font-size: 1.2rem;
-                font-weight: 300;
-                margin: 0;
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ubah ide menjadi karya nyata dengan kolaborasi membangun portfolio bersama." />
+    <meta property="og:site_name" content="Mulaidev">
+    <meta property="og:title" content="Mulaidev Initiative">
+    <meta property="og:url" content="https://mulai.dev">
+    <meta property="og:image" content="https://mulai.dev/public/user-collaboration.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo.png">
+    <title>Mulai membangun karya portfolio bersama copywriter, desainer dan programmer</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff;
+            background-image: url(/user-collaboration.png);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: 70vw;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #0457d4;
+            line-height: 1.8em;
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        a {
+            color: royalblue;
+            text-decoration: none;
+            transition: all .5s;
+        }
+
+        a:hover {
+            color: #0457d4;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: -5rem auto 0;
+            padding: 0 0 5rem;
+        }
+
+        h1,
+        h2 {
+            color: royalblue;
+            font-weight: 900;
+            text-transform: uppercase;
+            word-spacing: .25rem;
+        }
+
+        h1 {
+            line-height: 1.2em;
+        }
+
+        .quote {
+            font-size: 1.5rem;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        ol,
+        ul {
+            margin: 0;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        strong {
+            color: royalblue;
+            font-weight: 900;
+        }
+
+        em {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .bg {
+            background-image: url(/bg-head.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .bg h1,
+        .bg p {
+            color: #ffe900;
+        }
+
+        .bg>div {
+            padding: 2rem;
+            background-color: rgb(4 87 212 / 55%);
+        }
+
+        .bg-blue {
+            background-color: #0457d4;
+            background-image: url(/bg-card.jpeg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 2rem;
+            margin-bottom: 6rem;
+            overflow: hidden;
+        }
+
+        .bg-blue>div {
+            background-color: #0457d4be;
+            padding: 2rem 2rem 0;
+        }
+
+        .bg-blue .grid {
+            margin-bottom: 0;
+        }
+
+        .bg-blue h1,
+        .bg-blue h2,
+        .bg-blue p,
+        .bg-blue strong {
+            color: #ffe900;
+        }
+
+        .bg-blue strong {
+            background-color: #ffe900;
+            color: royalblue;
+            font-weight: 300;
+            padding: .25rem .5rem;
+        }
+
+        .grid {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6rem;
+        }
+
+        .grid.between {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 1rem;
+        }
+
+        .grid>p {
+            margin: 0 1.5rem 4rem;
+        }
+
+        .btn {
+            background-color: #0457d4;
+            border-radius: 3rem;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: .123rem;
+            padding: 1rem 2.5rem;
+            text-transform: uppercase;
+            transition: all .5s;
+        }
+
+        .btn.btn-small {
+            font-size: .85rem;
+            padding: .5rem 2rem;
+            line-height: 35pt;
+        }
+
+        .btn:hover {
+            background-color: royalblue;
+            color: #fff;
+        }
+
+        .btn-nav {
+            font-size: 1rem;
+            margin: .75rem;
+            border: 2px solid royalblue;
+            border-radius: 3rem;
+            padding: .5rem 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: .123rem;
+        }
+
+        @media (min-width: 992px) {
+
+            .bg,
+            .bg-blue {
+                background-attachment: fixed;
             }
 
-            a {
-                color: royalblue;
-                text-decoration: none;
-                transition: all .5s;
-            }
-            a:hover {
-                color: #0457d4;
+            body {
+                background-size: 25rem;
+                padding-bottom: 5rem;
             }
 
             .container {
-                max-width: 90vw;
-                margin: -5rem auto 0;
-                padding: 0 0 5rem;
-            }
-
-            h1, h2 {
-                color: royalblue;
-                font-weight: 900;
-                text-transform: uppercase;
-                word-spacing: .25rem;
-            }
-
-            h1 {
-                line-height: 1.2em;
-            }
-
-            .quote {
-                font-size: 1.5rem;
-            }
-
-            .float-right {
-                float: right;
-            }
-
-            .text-center {
-                text-align: center;
-            }
-
-            ol,
-            ul {
-                margin: 0;
-            }
-
-            p {
-                margin-bottom: 2rem;
-            }
-
-            strong {
-                color: royalblue;
-                font-weight: 900;
-            }
-
-            em {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-            }
-
-            .bg {
-                background-image: url(/bg-head.jpeg);
-                background-size: cover;
-                background-position: center;
-            }
-
-            .bg h1, .bg p {
-                color: #ffe900;
-            }
-
-            .bg>div {
-                padding: 2rem;
-                background-color: rgb(4 87 212 / 55%);
-            }
-
-            .bg-blue {
-                background-color: #0457d4;
-                background-image: url(/bg-card.jpeg);
-                background-position: center;
-                background-size: cover;
-                border-radius: 2rem;
-                margin-bottom: 6rem;
-                overflow: hidden;
-            }
-
-            .bg-blue>div {
-                background-color: #0457d4be;
-                padding: 2rem 2rem 0;
-            }
-
-            .bg-blue .grid {
-                margin-bottom: 0;
-            }
-
-            .bg-blue h1, .bg-blue h2, .bg-blue p, .bg-blue strong {
-                color: #ffe900;
-            }
-
-            .bg-blue strong {
-                background-color: #ffe900;
-                color: royalblue;
-                font-weight: 300;
-                padding: .25rem .5rem;
+                max-width: 70vw;
             }
 
             .grid {
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 6rem;
+                flex-direction: row;
             }
 
-            .grid.between {
-                flex-direction: row;
-                justify-content: space-between;
-                margin: 0 1rem;
+            .evenly {
+                justify-content: space-evenly;
             }
 
             .grid>p {
-                margin: 0 1.5rem 4rem;
+                margin: 0 2.5rem 4rem;
             }
 
             .btn {
-                background-color: #0457d4;
-                border-radius: 3rem;
-                color: white;
-                font-size: 1rem;
-                font-weight: bold;
-                letter-spacing: .123rem;
-                padding: 1rem 2.5rem;
-                text-transform: uppercase;
-                transition: all .5s;
+                font-size: 1.4rem;
+                padding: 1.5rem 4.5rem;
             }
+        }
+    </style>
+</head>
 
-            .btn.btn-small {
-                font-size: .85rem;
-                padding: .5rem 2rem;
-                line-height: 35pt;
-            }
-
-            .btn:hover {
-                background-color: royalblue;
-                color: #fff;
-            }
-
-            .btn-nav {
-                font-size: 1rem;
-                margin: .75rem;
-                border: 2px solid royalblue;
-                border-radius: 3rem;
-                padding: .5rem 2rem;
-                font-weight: 900;
-                text-transform: uppercase;
-                letter-spacing: .123rem;
-            }
-
-            @media (min-width: 992px) {
-                .bg, .bg-blue {
-                    background-attachment: fixed;
-                }
-                body {
-                    background-size: 25rem;
-                    padding-bottom: 5rem;
-                }
-
-                .container {
-                    max-width: 70vw;
-                }
-
-                .grid {
-                    flex-direction: row;
-                }
-
-                .evenly {
-                    justify-content: space-evenly;
-                }
-
-                .grid>p {
-                    margin: 0 2.5rem 4rem;
-                }
-                .btn {
-                    font-size: 1.4rem;
-                    padding: 1.5rem 4.5rem;
-                }
-            }
-
-        </style>
-    </head>
-
-    <body>
-        <div class="grid between">
-            <img height="80" width="80" src="/logo.png" alt="Mulaidev">
-            <a class="btn-nav" href="https://forms.formium.io/f/608b70ac0304f100014f8570">Register</a>
+<body>
+    <div class="grid between">
+        <img height="80" width="80" src="/logo.png" alt="Mulaidev">
+        <a class="btn-nav" href="https://forms.formium.io/f/608b70ac0304f100014f8570">Register</a>
+    </div>
+    <div class="bg">
+        <div class="text-center">
+            <br><br><br>
+            <h1>Mulai berkarya<br>bersama</h1>
+            <p class="quote"><em>Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio bersama.</em></p>
+            <br><br><br>
         </div>
-        <div class="bg">
+    </div>
+    <div class="container">
+        <div class="bg-blue">
             <div class="text-center">
-                <br><br><br>
-                <h1>Mulai berkarya<br>bersama</h1>
-                <p class="quote"><em>Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio bersama.</em></p>
-                <br><br><br>
-            </div>
-        </div>
-        <div class="container">
-            <div class="bg-blue">
-                <div class="text-center">
-                    <h2>Jenjang karir yang akan difokuskan</h2>
-                    <br>
-                </div>
-                <div class="grid">
-                    <p><strong>Product Management</strong><br>Mengatur alokasi waktu dan ekspektasi para stakeholders agar tercapainya peningkatan kualitas produk.</p>
-                    <p><strong>Desainer UI/UX</strong><br>Mengubah keinginan klien sesuai kebutuhan konsumen ke dalam bentuk tampilan dan interaksi yang memudahkan pengguna</p>
-                </div>
-                <div class="grid">
-                    <p><strong>Frontend Web Developer</strong><br>Bertugas mengubah bahasa desain menjadi bahasa pemrograman dan mengintegrasikannya menjadi tampilan yang responsif.</p>
-                    <p><strong>Backend Web Developer</strong><br>Membuat fungsi logika yang membuat sistem berjalan sesuai alur kerja.</p>
-                    <p><strong>Digital Marketing</strong><br>Membangun kebutuhan terhadap produk sehingga pelanggan loyal dengan keilmuan psikologi.</p>
-                </div>
-            </div>
-            <div class="text-center">
-                <h2>Dipandu para mentor<br>yang mampu membangkitkan potensi</h2>
+                <h2>Jenjang karir yang akan difokuskan</h2>
                 <br>
             </div>
-            <div class="grid evenly text-center">
-                <p><img src="/dinda.png" alt="Foto" height="150" width="150"><br><strong>Dinda</strong><br>Copywriting</p>
-                <p><img src="/arif.png" alt="Foto" height="150" width="150"><br><strong>Arif</strong><br>Video Editing</p>
-                <p><img src="/rio.png" alt="Foto" height="150" width="150"><br><strong>Rio</strong><br>Fullstack Design</p>
+            <div class="grid">
+                <p><strong>Product Management</strong><br>Mengatur alokasi waktu dan ekspektasi para stakeholders agar
+                    tercapainya peningkatan kualitas produk.</p>
+                <p><strong>Desainer UI/UX</strong><br>Mengubah keinginan klien sesuai kebutuhan konsumen ke dalam bentuk
+                    tampilan dan interaksi yang memudahkan pengguna</p>
             </div>
-            <div class="bg-blue">
-                <div class="text-center">
-                    <h2>Kompetensi adaptif<br>untuk menghadapi jaman disruptif</h2>
-                    <br>
-                </div>
-                <div class="grid">
-                    <p><strong>Individual Level</strong><br>Komunikasi Intrapersonal, Integritas, Manajemen Stres, Berpikir Kreatif, Empati</p>
-                    <p><strong>Teamship Level</strong><br>Kerjasama, Kolaborasi, Resolusi Konflik, Teknik Menjual</p>
-                    <p><strong>Organization Level</strong><br>Kepemimpinan, Komitmen Organisasi, Kewirausahaan, Menetapkan Tujuan Hidup</p>
-                </div>
+            <div class="grid">
+                <p><strong>Frontend Web Developer</strong><br>Bertugas mengubah bahasa desain menjadi bahasa pemrograman
+                    dan mengintegrasikannya menjadi tampilan yang responsif.</p>
+                <p><strong>Backend Web Developer</strong><br>Membuat fungsi logika yang membuat sistem berjalan sesuai
+                    alur kerja.</p>
+                <p><strong>Digital Marketing</strong><br>Membangun kebutuhan terhadap produk sehingga pelanggan loyal
+                    dengan keilmuan psikologi.</p>
             </div>
-            <div class="text-center">
-                <a class="btn" href="https://forms.formium.io/f/608b70ac0304f100014f8570">Mulai Berkarya</a>
-            </div>
-            <br><br><br><br><br>
-            <a class="float-right" href="https://www.instagram.com/mulaidev/">@mulaidev</a>
-            <a href="https://github.com/mulaidev/">/mulaidev</a>
         </div>
+        <div class="text-center">
+            <h2>Dipandu para mentor<br>yang mampu membangkitkan potensi</h2>
+            <br>
+        </div>
+        <div class="grid evenly text-center">
+            <p><img src="/dinda.png" alt="Foto" height="150" width="150"><br><strong>Dinda</strong><br>Copywriting</p>
+            <p><img src="/arif.png" alt="Foto" height="150" width="150"><br><strong>Arif</strong><br>Video Editing</p>
+            <p><img src="/rio.png" alt="Foto" height="150" width="150"><br><strong>Rio</strong><br>Fullstack Design</p>
+        </div>
+        <div class="bg-blue">
+            <div class="text-center">
+                <h2>Kompetensi adaptif<br>untuk menghadapi jaman disruptif</h2>
+                <br>
+            </div>
+            <div class="grid">
+                <p><strong>Individual Level</strong><br>Komunikasi Intrapersonal, Integritas, Manajemen Stres, Berpikir
+                    Kreatif, Empati</p>
+                <p><strong>Teamship Level</strong><br>Kerjasama, Kolaborasi, Resolusi Konflik, Teknik Menjual</p>
+                <p><strong>Organization Level</strong><br>Kepemimpinan, Komitmen Organisasi, Kewirausahaan, Menetapkan
+                    Tujuan Hidup</p>
+            </div>
+        </div>
+        <div class="text-center">
+            <a class="btn" href="https://forms.formium.io/f/608b70ac0304f100014f8570">Mulai Berkarya</a>
+        </div>
+        <br><br><br><br><br>
+        <a class="float-right" href="https://www.instagram.com/mulaidev/">@mulaidev</a>
+        <a href="https://github.com/mulaidev/">/mulaidev</a>
+    </div>
 
-    </body>
+</body>
 
 </html>
