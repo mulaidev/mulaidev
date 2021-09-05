@@ -35,13 +35,15 @@ const Css = (() => {
 </head>
 
 <body class="font-body text-blue-500">
-    <div class="flex justify-between lg:fixed w-full">
+    <div class="flex justify-between lg:fixed w-full lg:z-10">
         <img class="mx-5" height="80" width="80" src="/logo.png" alt="Mulaidev">
         <a class="m-5 p-3 px-12 uppercase bg-blue-500 hover:bg-blue-200 text-white hover:text-blue-500 rounded-full font-bold shadow" href="#register">Register</a>
     </div>
-    <div style="background-image: url(https://images.unsplash.com/photo-1534484489997-0a40568864d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1360&h=800&q=80);" class="h-screen bg-cover text-center text-white p-12 pb-24 grid place-items-center">
-        <h1 class="text-3xl mb-12 uppercase font-black tracking-widest">Mulai berkarya bersama</h1>
-        <p class="text-base tracking-wide">Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio bersama.</p>
+    <div style="background-image: url(https://images.unsplash.com/photo-1588856122867-363b0aa7f598?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1360&h=800&q=80);" class="h-screen bg-cover text-center text-white">
+        <div class="grid place-items-center h-full w-full p-12 pb-24 bg-blue-900 bg-opacity-50">
+            <h1 class="text-3xl mb-12 uppercase font-black tracking-widest">Mulai berkarya bersama</h1>
+            <p class="text-base tracking-wide">Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio bersama.</p>
+        </div>
     </div>
     <div class="grid place-items-center grid-cols-1 md:grid-cols-3 gap-10 p-20 m-auto text-center -mt-48">
         <a href="#" class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-purple-200 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110">
@@ -70,24 +72,30 @@ const Css = (() => {
                     disruptif</h2>
                 <br>
             </div>
-            <div class="flex justify-between">
-                <p class="bg-white bg-opacity-25 p-5 m-5 rounded-xl"><strong>Individual Level</strong><br>Komunikasi Intrapersonal, Integritas, Manajemen Stres, Berpikir
-                    Kreatif, Empati</p>
-                <p class="bg-white bg-opacity-25 p-5 m-5 rounded-xl"><strong>Teamship Level</strong><br>Kerjasama, Kolaborasi, Resolusi Konflik, Teknik Menjual</p>
-                <p class="bg-white bg-opacity-25 p-5 m-5 rounded-xl"><strong>Organization Level</strong><br>Kepemimpinan, Komitmen Organisasi, Kewirausahaan, Menetapkan
+            <div class="lg:flex justify-center">
+                <p class="bg-white bg-opacity-25 p-12 m-5 rounded-xl"><strong>Individual Level</strong><br><br>Komunikasi Intrapersonal<br> Integritas<br>Manajemen Stres<br>Berpikir
+                    Kreatif<br>Empati</p>
+                <p class="bg-white bg-opacity-25 p-12 m-5 rounded-xl"><strong>Teamship Level</strong><br><br>Kerjasama<br>Kolaborasi<br>Resolusi Konflik<br>Teknik Menjual</p>
+                <p class="bg-white bg-opacity-25 p-12 m-5 rounded-xl"><strong>Organization Level</strong><br><br>Kepemimpinan<br>Komitmen Organisasi<br>Kewirausahaan<br>Menetapkan
                     Tujuan Hidup</p>
             </div>
         </div>
     </div>
     <div id="register" class="bg-gradient-to-r from-purple-200 via-blue-100 to-gray-100">
-        <div class="container mx-auto py-24">
+        <div class="container mx-auto py-24 px-8">
             <div class="grid place-items-center">
                 <h2 class="text-center text-xl uppercase font-black my-12">Register</h2>
                 <script async data-uid="d4f88ea478" src="https://mulai.ck.page/d4f88ea478/index.js"></script>
             </div>
         </div>
     </div>
-    <div class="bg-cover h-screen" style="background-image: url(https://images.unsplash.com/photo-1605711285791-0219e80e43a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1360&q=80);"></div>
+    <div class="overflow-hidden">
+        <div class="-mt-64 relative -bottom-44">
+            <iframe class="w-full h-screen" id="ytplayer" type="text/html" width="720" height="405"
+            src="https://www.youtube.com/embed/izBVXTMcEH0?controls=0&listType=playlist&list=PLzxpCdIZWLmyQSBdUVJhFwzqrZE0WRDMi&disablekb=1&fs=0&modestbranding=1&playsinline=1&start=5"
+            frameborder="0" allowfullscreen>
+        </div>
+    </div>
 
 </body>
 
