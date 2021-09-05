@@ -1,6 +1,11 @@
 ---
 
-const Css = Astro.site + "style.css";
+const Css = (() => {
+    if (process.env.NODE_ENV == "production")
+      return Astro.site + "/style.css";
+    else
+      return "/style.css";
+})();
 
 ---
 <!DOCTYPE html>
@@ -21,59 +26,68 @@ const Css = Astro.site + "style.css";
     <title>Mulai membangun karya portfolio bersama copywriter, desainer dan programmer</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href={Css}>
+    <link rel="stylesheet" href="{Css}">
+    <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    </style>
 </head>
 
 <body class="font-body text-blue-500">
-    <div class="flex justify-between">
+    <div class="flex justify-between lg:fixed w-full">
         <img class="mx-5" height="80" width="80" src="/logo.png" alt="Mulaidev">
-        <a class="m-5 p-5 uppercase" href="https://forms.formium.io/f/608b70ac0304f100014f8570">Register</a>
+        <a class="m-5 p-3 px-12 uppercase bg-blue-500 hover:bg-blue-200 text-white hover:text-blue-500 rounded-full font-bold shadow" href="#register">Register</a>
     </div>
-    <div class="bg-gradient-to-l from-blue-600 via-blue-800 to-blue-700  text-center text-white p-12 pb-24">
-        <h1 class="text-xl mb-12 uppercase font-black">Mulai berkarya bersama</h1>
-        <p class="text-base">Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio bersama.</p>
+    <div style="background-image: url(https://images.unsplash.com/photo-1534484489997-0a40568864d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1360&h=800&q=80);" class="h-screen bg-cover text-center text-white p-12 pb-24 grid place-items-center">
+        <h1 class="text-3xl mb-12 uppercase font-black tracking-widest">Mulai berkarya bersama</h1>
+        <p class="text-base tracking-wide">Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio bersama.</p>
     </div>
-    <div class="container mx-auto -mt-12 px-5 mb-40">
-        <div class="bg-gradient-to-r from-blue-500 via-blue-500 to-blue-300 text-white p-12 shadow-xl rounded-xl">
-            <h2 class="text-center text-xl mb-12 uppercase font-black">Jenjang karir yang akan difokuskan</h2>
-            <div class="flex justify-between">
-                <p><strong>Copywriting</strong><br>Mengubah keinginan klien sesuai kebutuhan konsumen ke dalam bentuk
-                    tampilan dan interaksi yang memudahkan pengguna</p>
-                <p><strong>Fullstack Designer</strong><br>Mengubah keinginan klien sesuai kebutuhan konsumen ke dalam
-                    bentuk tampilan dan interaksi yang memudahkan pengguna dan mengubah bahasa desain menjadi bahasa
-                    pemrograman dan mengintegrasikannya menjadi tampilan yang responsif.</p>
-                <p><strong>Digital Marketing</strong><br>Membangun kebutuhan terhadap produk sehingga pelanggan loyal
-                    dengan keilmuan psikologi.</p>
-            </div>
-        </div>
-        <h2 class="text-center text-xl uppercase font-black my-12">Dipandu para mentor<br>yang mampu
-            membangkitkan
-            potensi</h2>
-        <div class="flex justify-between text-center">
-            <p><img src="/dinda.png" alt="Foto" height="150" width="150"><br><strong>Dinda</strong><br>Copywriting</p>
-            <p><img src="/arif.png" alt="Foto" height="150" width="150"><br><strong>Arif</strong><br>Video Editing</p>
-            <p><img src="/rio.png" alt="Foto" height="150" width="150"><br><strong>Rio</strong><br>Fullstack Design</p>
-        </div>
-        <div class="bg-gradient-to-r from-blue-500 via-blue-500 to-blue-300 text-white my-24 p-12 shadow-xl rounded-xl">
+    <div class="grid place-items-center grid-cols-1 md:grid-cols-3 gap-10 p-20 m-auto text-center -mt-48">
+        <a href="#" class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-purple-200 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <img src="https://images.unsplash.com/photo-1535642147056-37b87c7e3042?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80" alt="">
+            <h2 class="text-xl font-black p-8 pb-0 uppercase">From Reading to Writing</h2>
+            <p class="p-8">Mari kita menulis bersama dengan ilmu penulisan yang terstruktur dan mengutuhkan pemahaman kita dengan berdiskusi bersama.</p>
+            <p class="p-8"><img class="m-auto" src="/dinda.png" alt="Foto" height="150" width="150"><br><strong>M. Dinda Nurrochman</strong><br>Writer</p>
+        </a>
+        <a href="#" class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-purple-200 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80" alt="">
+            <h2 class="text-xl font-black p-8 pb-0 uppercase">Content Creation in Video</h2>
+            <p class="p-8">Buat video yang menggugah jiwa dengan mempelajari teknik profesional dalam videografi.</p>
+            <p class="p-8"><img class="m-auto" src="/arif.png" alt="Foto" height="150" width="150"><br><strong>Arif Anas</strong><br>Videographer</p>
+        </a>
+        <a href="#" class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-purple-200 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <img src="https://images.unsplash.com/photo-1602265585142-6b221b9b2c24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300&q=80" alt="">
+            <h2 class="text-xl font-black p-8 pb-0 uppercase">Modern Frontend</h2>
+            <p class="p-8">Membangun website dari awal dengan standar produksi yang siap untuk web vital.</p>
+            <p class="p-8"><img class="m-auto" src="/rio.png" alt="Foto" height="150" width="150"><br><strong>Rio Purnomo</strong><br>Fullstack Designer</p>
+        </a>
+    </div>
+    <div class="container mx-auto px-5 mb-40">
+        <div class="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-300 text-white my-24 p-12 py-24 shadow-xl rounded-xl text-center">
             <div class="text-center">
                 <h2 class="text-center text-xl uppercase font-black mb-12">Kompetensi adaptif<br>untuk menghadapi jaman
                     disruptif</h2>
                 <br>
             </div>
             <div class="flex justify-between">
-                <p><strong>Individual Level</strong><br>Komunikasi Intrapersonal, Integritas, Manajemen Stres, Berpikir
+                <p class="bg-white bg-opacity-25 p-5 m-5 rounded-xl"><strong>Individual Level</strong><br>Komunikasi Intrapersonal, Integritas, Manajemen Stres, Berpikir
                     Kreatif, Empati</p>
-                <p><strong>Teamship Level</strong><br>Kerjasama, Kolaborasi, Resolusi Konflik, Teknik Menjual</p>
-                <p><strong>Organization Level</strong><br>Kepemimpinan, Komitmen Organisasi, Kewirausahaan, Menetapkan
+                <p class="bg-white bg-opacity-25 p-5 m-5 rounded-xl"><strong>Teamship Level</strong><br>Kerjasama, Kolaborasi, Resolusi Konflik, Teknik Menjual</p>
+                <p class="bg-white bg-opacity-25 p-5 m-5 rounded-xl"><strong>Organization Level</strong><br>Kepemimpinan, Komitmen Organisasi, Kewirausahaan, Menetapkan
                     Tujuan Hidup</p>
             </div>
         </div>
-        <div class="text-center my-12">
-            <a class="rounded-full border-2 border-blue-600 py-6 px-12 text-xl uppercase font-black"
-                href="https://forms.formium.io/f/608b70ac0304f100014f8570">Mulai
-                Berkarya</a>
+    </div>
+    <div id="register" class="bg-gradient-to-r from-purple-200 via-blue-100 to-gray-100">
+        <div class="container mx-auto py-24">
+            <div class="grid place-items-center">
+                <h2 class="text-center text-xl uppercase font-black my-12">Register</h2>
+                <script async data-uid="d4f88ea478" src="https://mulai.ck.page/d4f88ea478/index.js"></script>
+            </div>
         </div>
     </div>
+    <div class="bg-cover h-screen" style="background-image: url(https://images.unsplash.com/photo-1605711285791-0219e80e43a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1360&q=80);"></div>
 
 </body>
 
