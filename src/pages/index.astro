@@ -2,7 +2,7 @@
 
 const Css = (() => {
     if (process.env.NODE_ENV == "production")
-      return Astro.site + "/style.css";
+      return Astro.site + "style.css";
     else
       return "/style.css";
 })();

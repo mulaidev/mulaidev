@@ -5,8 +5,8 @@
   "scripts": {
     "start": "astro dev",
     "build": "NODE_ENV=production astro build",
-    "watch": "npx tailwindcss -o dist/style.css --watch",
-    "minify": "npx tailwindcss -o public/style.css --minify"
+    "watch": "npx tailwindcss -o public/style.css --watch",
+    "minify": "npx tailwindcss -o dist/style.css --minify"
   },
   "devDependencies": {
     "astro": "^0.18.5",
