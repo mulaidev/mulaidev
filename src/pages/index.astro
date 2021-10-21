@@ -1,10 +1,10 @@
 ---
 
 const Css = (() => {
-    if (process.env.NODE_ENV == "production")
-      return Astro.site + "style.css";
-    else
-      return "/style.css";
+if (process.env.NODE_ENV == "production")
+return Astro.site + "style.css";
+else
+return "/style.css";
 })();
 
 ---
@@ -28,61 +28,89 @@ const Css = (() => {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{Css}">
     <style>
-    html {
-        scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 
 <body class="font-body text-blue-500">
     <div class="flex justify-between lg:fixed w-full lg:z-10">
         <img class="mx-5" height="80" width="80" src="/logo.png" alt="Mulaidev">
-        <a class="m-5 p-3 px-12 uppercase bg-blue-500 hover:bg-blue-200 text-white hover:text-blue-500 rounded-full font-bold shadow" href="#register">Register</a>
+        <a class="m-5 p-3 px-12 uppercase bg-blue-500 hover:bg-blue-200 text-white hover:text-blue-500 rounded-full font-bold shadow"
+            href="#register">Register</a>
     </div>
-    <div style="background-image: url(https://images.unsplash.com/photo-1588856122867-363b0aa7f598?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1360&h=800&q=80);" class="md:h-screen bg-cover text-center text-white">
+    <div style="background-image: url(https://images.unsplash.com/photo-1568658176307-bfbd2873abda?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1360&h=800&q=80);"
+        class="md:h-screen bg-cover text-center text-white">
         <div class="grid place-items-center h-full w-full p-12 pb-24 bg-blue-900 bg-opacity-50">
             <h1 class="text-3xl mb-12 uppercase font-black tracking-widest">Mulai berkarya bersama</h1>
-            <p class="text-base tracking-wide">Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio bersama.</p>
+            <p class="text-base tracking-wide">Ubah ide menjadi karya nyata dengan kolaborasi<br>membangun portfolio
+                bersama.</p>
         </div>
     </div>
-    <div class="grid place-items-center grid-cols-1 md:grid-cols-3 md:gap-5 p-5 md:p-20 m-auto text-center -mt-12 md:-mt-48">
-        <a href="#" class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-red-100 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110 pb-20">
-            <img src="https://images.unsplash.com/photo-1535642147056-37b87c7e3042?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80" alt="">
+    <div
+        class="grid place-items-center grid-cols-1 md:grid-cols-4 md:gap-5 p-5 md:p-20 m-auto text-center -mt-12 md:-mt-48">
+        <a href="#"
+            class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-red-100 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110 pb-20">
+            <img height="300" width="500"
+                src="https://images.unsplash.com/photo-1535642147056-37b87c7e3042?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80"
+                alt="">
             <h2 class="text-xl font-black p-8 pb-0 uppercase">From Reading to Writing</h2>
-            <p class="p-8">Asah kemampuan menulis untuk menyampaikan gagasan di era informasi sehingga mampu menggugah pembaca untuk berpikir dan beraksi!</p>
-            <p class="p-8"><img class="m-auto" src="/dinda.png" alt="Foto" height="150" width="150"><br><strong>M. Dinda Nurrochman</strong><br>Writer</p>
+            <p class="p-8">Asah kemampuan menulis untuk menyampaikan gagasan di era informasi sehingga mampu menggugah
+                pembaca untuk berpikir dan beraksi!</p>
+            <p class="p-8"><img class="m-auto" src="/dinda.png" alt="Foto" height="150" width="150"><br><strong>M. Dinda
+                    Nurrochman</strong><br>Writer</p>
         </a>
-        <a href="#" class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-green-100 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110 pb-20">
-            <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80" alt="">
+        <a href="#"
+            class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-green-100 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110 pb-20">
+            <img height="300" width="500"
+                src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80"
+                alt="">
             <h2 class="text-xl font-black p-8 pb-0 uppercase">Content Creation in Video+Graphic</h2>
-            <p class="p-8">Mengemas informasi melalui efek visual dan grafis untuk kebutuhan promosi di media sosial agar lebih memukau.</p>
-            <p class="p-8"><img class="m-auto" src="/arif.png" alt="Foto" height="150" width="150"><br><strong>Arif Anas</strong><br>Designer</p>
+            <p class="p-8">Mengemas informasi melalui efek visual dan grafis untuk kebutuhan promosi di media sosial
+                agar lebih memukau.</p>
+            <p class="p-8"><img class="m-auto" src="/arif.png" alt="Foto" height="150" width="150"><br><strong>Arif
+                    Anas</strong><br>Designer</p>
         </a>
-        <a href="#" class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-yellow-100 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110 pb-20">
-            <img src="https://images.unsplash.com/photo-1602265585142-6b221b9b2c24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300&q=80" alt="">
+        <a href="#"
+            class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-yellow-100 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110 pb-20">
+            <img height="300" width="500"
+                src="https://images.unsplash.com/photo-1602265585142-6b221b9b2c24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300&q=80"
+                alt="">
             <h2 class="text-xl font-black p-8 pb-0 uppercase">Modern Frontend</h2>
-            <p class="p-8">Membangun website dari awal dengan teknologi terkini tentang backend-frontend-devops sehingga prosesnya lebih mudah dan hasilnya cepat.</p>
-            <p class="p-8"><img class="m-auto" src="/rio.png" alt="Foto" height="150" width="150"><br><strong>Rio Purnomo</strong><br>Fullstack Engineer</p>
+            <p class="p-8">Membangun website dari awal dengan teknologi terkini tentang backend-frontend-devops sehingga
+                prosesnya lebih mudah dan hasilnya cepat.</p>
+            <p class="p-8"><img class="m-auto" src="/rio.png" alt="Foto" height="150" width="150"><br><strong>Rio
+                    Purnomo</strong><br>Fullstack Engineer</p>
         </a>
-        <a href="#" class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-green-100 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110 pb-20">
-            <img src="https://images.unsplash.com/photo-1521851562770-de70f34424b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80" alt="">
+        <a href="#"
+            class="max-w-sm rounded-3xl overflow-hidden bg-gradient-to-b from-blue-200 via-green-100 to-white transition duration-1000 ease-in-out transform hover:-translate-y-1 hover:scale-110 pb-20">
+            <img height="300" width="500"
+                src="https://images.unsplash.com/photo-1521851562770-de70f34424b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80"
+                alt="">
             <h2 class="text-xl font-black p-8 pb-0 uppercase">Swimming for Body and Soul</h2>
-            <p class="p-8">Cek ombak agar mampu bergerak menuju sesuatu dan tidak lagi tenggelam dalam kenangan masa lalu...</p>
-            <p class="p-8"><img class="m-auto" src="/geri.png" alt="Foto" height="150" width="150"><br><strong>Geri Gervian</strong><br>Swimmer</p>
+            <p class="p-8">Cek ombak agar mampu bergerak menuju sesuatu dan tidak lagi tenggelam dalam kenangan masa
+                lalu...</p>
+            <p class="p-8"><img class="m-auto" src="/geri.png" alt="Foto" height="150" width="150"><br><strong>Geri
+                    Gervian</strong><br>Swimmer</p>
         </a>
     </div>
     <div class="container mx-auto md:px-5">
-        <div class="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-300 text-white -my-2 md:my-24 md:p-12 py-3 md:py-24 shadow-xl rounded-xl text-center relative">
+        <div
+            class="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-300 text-white -my-2 md:my-24 md:p-12 py-3 md:py-24 shadow-xl rounded-xl text-center relative">
             <div class="text-center">
                 <h2 class="text-center text-xl uppercase font-black mt-12">Kompetensi adaptif<br>untuk menghadapi jaman
                     disruptif</h2>
                 <br>
             </div>
             <div class="lg:flex justify-center">
-                <p class="bg-white bg-opacity-25 p-12 m-5 rounded-xl"><strong>Individual Level</strong><br><br>Komunikasi Intrapersonal<br> Integritas<br>Manajemen Stres<br>Berpikir
+                <p class="bg-white bg-opacity-25 p-12 m-5 rounded-xl"><strong>Individual
+                        Level</strong><br><br>Komunikasi Intrapersonal<br> Integritas<br>Manajemen Stres<br>Berpikir
                     Kreatif<br>Empati</p>
-                <p class="bg-white bg-opacity-25 p-12 m-5 rounded-xl"><strong>Teamship Level</strong><br><br>Kerjasama<br>Kolaborasi<br>Resolusi Konflik<br>Teknik Menjual</p>
-                <p class="bg-white bg-opacity-25 p-12 m-5 rounded-xl"><strong>Organization Level</strong><br><br>Kepemimpinan<br>Komitmen Organisasi<br>Kewirausahaan<br>Menetapkan
+                <p class="bg-white bg-opacity-25 p-12 m-5 rounded-xl"><strong>Teamship
+                        Level</strong><br><br>Kerjasama<br>Kolaborasi<br>Resolusi Konflik<br>Teknik Menjual</p>
+                <p class="bg-white bg-opacity-25 p-12 m-5 rounded-xl"><strong>Organization
+                        Level</strong><br><br>Kepemimpinan<br>Komitmen Organisasi<br>Kewirausahaan<br>Menetapkan
                     Tujuan Hidup</p>
             </div>
         </div>
@@ -96,13 +124,17 @@ const Css = (() => {
         </div>
     </div>
     <div class="overflow-hidden hidden md:block">
-        <div class="-mt-64 relative -bottom-44">
-            <iframe class="w-full md:h-screen" id="ytplayer" type="text/html" width="720" height="405"
-            src="https://www.youtube.com/embed/izBVXTMcEH0?controls=0&listType=playlist&list=PLzxpCdIZWLmyQSBdUVJhFwzqrZE0WRDMi&disablekb=1&fs=0&modestbranding=1&playsinline=1&start=5"
-            frameborder="0" allowfullscreen>
-        </div>
+        <div id="youtube" class="-mt-64 relative -bottom-44"></div>
     </div>
-
+    <script>
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 500) {
+                var youtube = '<iframe class="w-full md:h-screen" id="ytplayer" type="text/html" width="1920" height="1080" src="https://www.youtube.com/embed/izBVXTMcEH0?controls=0&listType=playlist&list=PLzxpCdIZWLmyQSBdUVJhFwzqrZE0WRDMi&disablekb=1&fs=0&modestbranding=1&playsinline=1&start=5" frameborder="0" allowfullscreen><\/iframe>';
+                var yt = document.getElementById("youtube");
+                yt.innerHTML = youtube;
+            }
+        }
+    </script>
 </body>
 
 </html>
