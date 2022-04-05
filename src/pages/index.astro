@@ -1,13 +1,3 @@
----
-
-const Css = (() => {
-if (process.env.NODE_ENV == "production")
-return Astro.site + "style.css";
-else
-return "/style.css";
-})();
-
----
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +16,6 @@ return "/style.css";
     <title>Mulai upgrade skill menulis, video editing dan koding</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="{Css}">
     <style>
         html {
             scroll-behavior: smooth;
