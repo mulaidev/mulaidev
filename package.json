@@ -1,15 +1,14 @@
 {
   "name": "mulaidev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "start": "astro dev",
-    "build": "NODE_ENV=production astro build",
-    "watch": "npx tailwindcss -o public/style.css --watch",
-    "minify": "npx tailwindcss -o dist/style.css --minify"
+    "build": "astro build"
   },
   "devDependencies": {
-    "astro": "^0.18.5",
-    "tailwindcss": "^2.2.7"
+    "@astrojs/tailwind": "^0.1.0",
+    "astro": "^0.26.1",
+    "tailwindcss": "^3.0.23"
   }
 }
