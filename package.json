@@ -9,7 +9,8 @@
     "minify": "npx tailwindcss -o dist/style.css --minify"
   },
   "devDependencies": {
-    "astro": "^0.18.5",
-    "tailwindcss": "^2.2.7"
+    "@astrojs/tailwind": "^0.1.0",
+    "astro": "^0.26.1",
+    "tailwindcss": "^3.0.23"
   }
 }
